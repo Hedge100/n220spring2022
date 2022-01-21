@@ -1,6 +1,6 @@
 //Ryan Butler
 //01.20.2020
-//Geometric line art
+//n220
 
 
 //creates a variable for the frame size which is referenced many times for calculations.
