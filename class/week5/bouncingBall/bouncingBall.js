@@ -1,6 +1,7 @@
 function setup() {
     createCanvas(window.innerWidth,window.innerHeight - 4)
 }
+//creates ball object
 let ball = {
     x:400,
     y:300,
@@ -9,6 +10,7 @@ let ball = {
     size:10,
     color:"blue"
 }
+//creates a ball that bounces around the screen
 function draw() {
     background('gray')
     fill(ball.color)
