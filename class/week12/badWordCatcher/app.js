@@ -13,6 +13,7 @@ function badWordChecker(){
             counter += 1
         }
     }
+    //output to user
     if(counter>=1){
         dvbadWordCount.innerHTML = "Bad words were found<br>" + counter + " bad words found."
     }else{
