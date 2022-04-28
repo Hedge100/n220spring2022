@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+    <style>
+        .square{
+            height : 150px;
+            width : 150px;
+            background-color: blue;
+            border-color:black;
+            border-width: 5px;
+            border-style: solid;
+        }
+        #message{
+            margin-top:15px
+        }
+        .game-board {
+            display: grid;
+            grid-template-rows: 150px 150px 150px;
+            grid-template-columns: 150px 150px 150px;
+            }
+    </style>
+</head>
+<body>
+    <div id="score1">Player 1: 0</div>
+    <div id="score2">Player 2: 0</div>
+    <button onclick="reset()">reset</button>
+    <div id="turn"></div>
+    
+    <div class="game-board">
+        <div id="sq0" class="square" data-row = "0" data-col = "0" onclick="move(event)">0</div>
+        <div id="sq1" class="square" data-row = "0" data-col = "1" onclick="move(event)">0</div>
+        <div id="sq2" class="square" data-row = "0" data-col = "2" onclick="move(event)">0</div>
+        <div id="sq3" class="square" data-row = "1" data-col = "0" onclick="move(event)">0</div>
+        <div id="sq4" class="square" data-row = "1" data-col = "1" onclick="move(event)">0</div>
+        <div id="sq5" class="square" data-row = "1" data-col = "2" onclick="move(event)">0</div>
+        <div id="sq6" class="square" data-row = "2" data-col = "0" onclick="move(event)">0</div>
+        <div id="sq7" class="square" data-row = "2" data-col = "1" onclick="move(event)">0</div>
+        <div id="sq8" class="square" data-row = "2" data-col = "2" onclick="move(event)">0</div>
+    </div>
+    <div id="message"> </div>
+    <script src="app.js"></script>
+</body>
+</html>
