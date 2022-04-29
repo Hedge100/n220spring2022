@@ -44,11 +44,13 @@ function switchPlayer(){
 let color=["blue", "green", "red"]
 //counter tracks number of moves made
 let counter = 0
-//move is the main function that assembles the functions to create the flow of the game.
+let winnerFound = false
+//move is the main function that assembles the other functions to create the flow of the game.
 function move(event){
     let col = event.target.dataset.col
     let row = event.target.dataset.row
-    if(grid[row][col]!=1 && grid[row][col]!=2){
+    console.log(winnerFound)
+    if(grid[row][col]!=1 && grid[row][col]!=2 && !winnerFound){
         grid[row][col]=turn
     event.target.innerHTML=turn
     event.target.style.backgroundColor=color[turn]
@@ -66,7 +68,6 @@ function move(event){
 //this function checks the grid for if there is a win and if so it reports it and increments the score.
 function checkWin(){
     let filteredGrid = []
-    let winnerFound = false
     console.log(grid)
     //player loop
     for(i=0;i<2;i++){
@@ -125,6 +126,7 @@ function reset(){
         boxes[i].innerHTML=0
         turn="1"
         counter=0
+        winnerFound=false
     }
     
 } 
